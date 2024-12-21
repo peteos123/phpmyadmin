@@ -8536,12 +8536,6 @@ parameters:
 			path: src/Footer.php
 
 		-
-			message: '#^Method PhpMyAdmin\\Footer\:\:getGitRevisionInfo\(\) should return array\<string, string\> but returns array\<mixed\>\.$#'
-			identifier: return.type
-			count: 1
-			path: src/Footer.php
-
-		-
 			message: '#^Only booleans are allowed in &&, array\<mixed, mixed\>\|object given on the right side\.$#'
 			identifier: booleanAnd.rightNotBoolean
 			count: 1
@@ -9172,7 +9166,7 @@ parameters:
 			path: src/Git.php
 
 		-
-			message: '#^Parameter \#1 \$commit of method PhpMyAdmin\\Git\:\:extractDataFormTextBody\(\) expects array\<mixed\>, mixed given\.$#'
+			message: '#^Parameter \#1 \$commit of static method PhpMyAdmin\\Git\:\:extractDataFormTextBody\(\) expects array\<string\>, mixed given\.$#'
 			identifier: argument.type
 			count: 1
 			path: src/Git.php
@@ -9214,7 +9208,7 @@ parameters:
 			path: src/Git.php
 
 		-
-			message: '#^Parameter \#2 \$string of function explode expects string, mixed given\.$#'
+			message: '#^Parameter \#2 \$string of function explode expects string, string\|null given\.$#'
 			identifier: argument.type
 			count: 1
 			path: src/Git.php
@@ -11860,12 +11854,6 @@ parameters:
 			path: src/Plugins/Export/ExportCodegen.php
 
 		-
-			message: '#^Cannot cast mixed to int\.$#'
-			identifier: cast.int
-			count: 1
-			path: src/Plugins/Export/ExportCodegen.php
-
-		-
 			message: '#^Parameter \#1 \$str of static method PhpMyAdmin\\Plugins\\Export\\ExportCodegen\:\:cgMakeIdentifier\(\) expects string, string\|null given\.$#'
 			identifier: argument.type
 			count: 6
@@ -12442,12 +12430,6 @@ parameters:
 			path: src/Plugins/Export/ExportPhparray.php
 
 		-
-			message: '#^Binary operation "\." between ''SET SQL_MODE\="'' and mixed results in an error\.$#'
-			identifier: binaryOp.invalid
-			count: 1
-			path: src/Plugins/Export/ExportSql.php
-
-		-
 			message: '#^Binary operation "\." between ''SET time_zone \= "'' and mixed results in an error\.$#'
 			identifier: binaryOp.invalid
 			count: 1
@@ -12576,7 +12558,7 @@ parameters:
 		-
 			message: '#^Construct empty\(\) is not allowed\. Use more strict comparison\.$#'
 			identifier: empty.notAllowed
-			count: 41
+			count: 27
 			path: src/Plugins/Export/ExportSql.php
 
 		-
@@ -12592,6 +12574,12 @@ parameters:
 			path: src/Plugins/Export/ExportSql.php
 
 		-
+			message: '#^Method PhpMyAdmin\\Plugins\\Export\\ExportSql\:\:setMaxQuerySize\(\) should return int\<0, max\> but returns int\.$#'
+			identifier: return.type
+			count: 2
+			path: src/Plugins/Export/ExportSql.php
+
+		-
 			message: '#^Only booleans are allowed in &&, bool\|null given on the left side\.$#'
 			identifier: booleanAnd.leftNotBoolean
 			count: 1
@@ -12601,12 +12589,6 @@ parameters:
 			message: '#^Only booleans are allowed in &&, mixed given on the left side\.$#'
 			identifier: booleanAnd.leftNotBoolean
 			count: 1
-			path: src/Plugins/Export/ExportSql.php
-
-		-
-			message: '#^Only booleans are allowed in &&, mixed given on the right side\.$#'
-			identifier: booleanAnd.rightNotBoolean
-			count: 4
 			path: src/Plugins/Export/ExportSql.php
 
 		-
@@ -12646,18 +12628,6 @@ parameters:
 			path: src/Plugins/Export/ExportSql.php
 
 		-
-			message: '#^Parameter \#2 \$compat of method PhpMyAdmin\\Plugins\\Export\\ExportSql\:\:exportUseStatement\(\) expects string, mixed given\.$#'
-			identifier: argument.type
-			count: 2
-			path: src/Plugins/Export/ExportSql.php
-
-		-
-			message: '#^Parameter \#2 \$compatibility of static method PhpMyAdmin\\Util\:\:backquoteCompat\(\) expects string, mixed given\.$#'
-			identifier: argument.type
-			count: 13
-			path: src/Plugins/Export/ExportSql.php
-
-		-
 			message: '#^Parameter \#2 \$haystack of function in_array expects array, mixed given\.$#'
 			identifier: argument.type
 			count: 1
@@ -12673,12 +12643,6 @@ parameters:
 			message: '#^Parameter \#2 \$sqlQuery of method PhpMyAdmin\\Plugins\\Export\\ExportSql\:\:replaceWithAliases\(\) expects string, string\|null given\.$#'
 			identifier: argument.type
 			count: 2
-			path: src/Plugins/Export/ExportSql.php
-
-		-
-			message: '#^Parameter \#2 \$string of function explode expects string, mixed given\.$#'
-			identifier: argument.type
-			count: 1
 			path: src/Plugins/Export/ExportSql.php
 
 		-
@@ -12701,12 +12665,6 @@ parameters:
 
 		-
 			message: '#^Parameter \#4 \$tableAlias of method PhpMyAdmin\\Plugins\\Export\\ExportSql\:\:generateComment\(\) expects string, string\|null given\.$#'
-			identifier: argument.type
-			count: 3
-			path: src/Plugins/Export/ExportSql.php
-
-		-
-			message: '#^Parameter \#5 \$compat of method PhpMyAdmin\\Plugins\\Export\\ExportSql\:\:generateComment\(\) expects string, mixed given\.$#'
 			identifier: argument.type
 			count: 3
 			path: src/Plugins/Export/ExportSql.php
@@ -12855,18 +12813,6 @@ parameters:
 		-
 			message: '#^Foreach overwrites \$table with its value variable\.$#'
 			identifier: foreach.valueOverwrite
-			count: 1
-			path: src/Plugins/Export/ExportXml.php
-
-		-
-			message: '#^Only booleans are allowed in &&, mixed given on the right side\.$#'
-			identifier: booleanAnd.rightNotBoolean
-			count: 6
-			path: src/Plugins/Export/ExportXml.php
-
-		-
-			message: '#^Only booleans are allowed in a negated boolean, mixed given\.$#'
-			identifier: booleanNot.exprNotBoolean
 			count: 1
 			path: src/Plugins/Export/ExportXml.php
 
@@ -21001,6 +20947,78 @@ parameters:
 			path: tests/unit/Gis/GisPolygonTest.php
 
 		-
+			message: '#^Call to static method PHPUnit\\Framework\\Assert\:\:assertArrayHasKey\(\) with ''author'' and array\{hash\: ''97b9895908f281b62c9…'', branch\: ''QA_5_2'', message\: string, author\: array\{name\: string, email\: string, date\: string\}, committer\: array\{name\: string, email\: string, date\: string\}, is_remote_commit\: bool, is_remote_branch\: bool\} will always evaluate to true\.$#'
+			identifier: staticMethod.alreadyNarrowedType
+			count: 1
+			path: tests/unit/GitTest.php
+
+		-
+			message: '#^Call to static method PHPUnit\\Framework\\Assert\:\:assertArrayHasKey\(\) with ''branch'' and array\{hash\: ''97b9895908f281b62c9…'', branch\: string\|false, message\: string, author\: array\{name\: string, email\: string, date\: string\}, committer\: array\{name\: string, email\: string, date\: string\}, is_remote_commit\: bool, is_remote_branch\: bool\} will always evaluate to true\.$#'
+			identifier: staticMethod.alreadyNarrowedType
+			count: 1
+			path: tests/unit/GitTest.php
+
+		-
+			message: '#^Call to static method PHPUnit\\Framework\\Assert\:\:assertArrayHasKey\(\) with ''committer'' and array\{hash\: ''97b9895908f281b62c9…'', branch\: ''QA_5_2'', message\: string, author\: array\{name\: string, email\: string, date\: string\}, committer\: array\{name\: string, email\: string, date\: string\}, is_remote_commit\: bool, is_remote_branch\: bool\} will always evaluate to true\.$#'
+			identifier: staticMethod.alreadyNarrowedType
+			count: 1
+			path: tests/unit/GitTest.php
+
+		-
+			message: '#^Call to static method PHPUnit\\Framework\\Assert\:\:assertArrayHasKey\(\) with ''hash'' and array\{hash\: string, branch\: string\|false, message\: string, author\: array\{name\: string, email\: string, date\: string\}, committer\: array\{name\: string, email\: string, date\: string\}, is_remote_commit\: bool, is_remote_branch\: bool\} will always evaluate to true\.$#'
+			identifier: staticMethod.alreadyNarrowedType
+			count: 1
+			path: tests/unit/GitTest.php
+
+		-
+			message: '#^Call to static method PHPUnit\\Framework\\Assert\:\:assertArrayHasKey\(\) with ''is_remote_branch'' and array\{hash\: ''97b9895908f281b62c9…'', branch\: ''QA_5_2'', message\: string, author\: array\{name\: string, email\: string, date\: string\}, committer\: array\{name\: string, email\: string, date\: string\}, is_remote_commit\: bool, is_remote_branch\: bool\} will always evaluate to true\.$#'
+			identifier: staticMethod.alreadyNarrowedType
+			count: 1
+			path: tests/unit/GitTest.php
+
+		-
+			message: '#^Call to static method PHPUnit\\Framework\\Assert\:\:assertArrayHasKey\(\) with ''is_remote_commit'' and array\{hash\: ''97b9895908f281b62c9…'', branch\: ''QA_5_2'', message\: string, author\: array\{name\: string, email\: string, date\: string\}, committer\: array\{name\: string, email\: string, date\: string\}, is_remote_commit\: bool, is_remote_branch\: bool\} will always evaluate to true\.$#'
+			identifier: staticMethod.alreadyNarrowedType
+			count: 1
+			path: tests/unit/GitTest.php
+
+		-
+			message: '#^Call to static method PHPUnit\\Framework\\Assert\:\:assertArrayHasKey\(\) with ''message'' and array\{hash\: ''97b9895908f281b62c9…'', branch\: ''QA_5_2'', message\: string, author\: array\{name\: string, email\: string, date\: string\}, committer\: array\{name\: string, email\: string, date\: string\}, is_remote_commit\: bool, is_remote_branch\: bool\} will always evaluate to true\.$#'
+			identifier: staticMethod.alreadyNarrowedType
+			count: 1
+			path: tests/unit/GitTest.php
+
+		-
+			message: '#^Call to static method PHPUnit\\Framework\\Assert\:\:assertIsArray\(\) with array\{hash\: string, branch\: string\|false, message\: string, author\: array\{name\: string, email\: string, date\: string\}, committer\: array\{name\: string, email\: string, date\: string\}, is_remote_commit\: bool, is_remote_branch\: bool\} will always evaluate to true\.$#'
+			identifier: staticMethod.alreadyNarrowedType
+			count: 1
+			path: tests/unit/GitTest.php
+
+		-
+			message: '#^Call to static method PHPUnit\\Framework\\Assert\:\:assertIsArray\(\) with array\{name\: string, email\: string, date\: string\} will always evaluate to true\.$#'
+			identifier: staticMethod.alreadyNarrowedType
+			count: 2
+			path: tests/unit/GitTest.php
+
+		-
+			message: '#^Call to static method PHPUnit\\Framework\\Assert\:\:assertIsBool\(\) with bool will always evaluate to true\.$#'
+			identifier: staticMethod.alreadyNarrowedType
+			count: 2
+			path: tests/unit/GitTest.php
+
+		-
+			message: '#^Call to static method PHPUnit\\Framework\\Assert\:\:assertIsString\(\) with string will always evaluate to true\.$#'
+			identifier: staticMethod.alreadyNarrowedType
+			count: 7
+			path: tests/unit/GitTest.php
+
+		-
+			message: '#^Call to static method PHPUnit\\Framework\\Assert\:\:assertNotNull\(\) with array\{hash\: string, branch\: string\|false, message\: string, author\: array\{name\: string, email\: string, date\: string\}, committer\: array\{name\: string, email\: string, date\: string\}, is_remote_commit\: bool, is_remote_branch\: bool\} will always evaluate to true\.$#'
+			identifier: staticMethod.alreadyNarrowedType
+			count: 1
+			path: tests/unit/GitTest.php
+
+		-
 			message: '''
 				#^Call to deprecated method getInstance\(\) of class PhpMyAdmin\\Config\:
 				Use dependency injection instead\.$#
@@ -21687,7 +21705,7 @@ parameters:
 		-
 			message: '#^Parameter \#2 \$haystack of static method PHPUnit\\Framework\\Assert\:\:assertStringContainsString\(\) expects string, mixed given\.$#'
 			identifier: argument.type
-			count: 4
+			count: 2
 			path: tests/unit/Plugins/Export/ExportSqlTest.php
 
 		-
